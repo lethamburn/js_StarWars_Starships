@@ -18,8 +18,8 @@ function printrebellion(rebellion) {
     newDiv$$.classList.add("b-newDiv", "col-md-3");
     newDiv$$.innerHTML = 
 
-    `<img class="b-newDiv__img" src=${rebel.image}>
-    <h3 class="b-newDiv b-newDiv__name">${rebel.name}</h3>
+    `<img class="b-newDiv__img" src=${rebel.image}><hr>
+    <h3 class="b-newDiv b-newDiv__name">${rebel.name}</h3><hr>
     <h2 class="b-newDiv b-newDiv_class">${rebel.class}</h2>
     <p class="b-newDiv b-newDiv_description">${rebel.description}</p>`;
 

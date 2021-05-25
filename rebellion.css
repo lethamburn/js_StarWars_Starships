@@ -1,11 +1,18 @@
 body {
-  background-color: grey;
+  background-color: rgb(107, 107, 107);
   margin: 0px;
+}
+
+hr {
+  border: 0;
+  border-top: 3px solid rgb(0, 0, 0);
+  height: 0;
 }
 
 .b-top {
   height: 72px;
-  background-color: white;
+  background-color: rgb(107, 107, 107);
+  color: rgb(255, 255, 255);
   position: relative;
   display: flex;
   justify-content: center;
@@ -22,6 +29,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-width: 3px;
+  border-style: solid;
+  border-color: black;
 }
 
 .b-top__title {
@@ -43,6 +53,9 @@ body {
   font-size: 14px;
   align-content: center;
   background: none;
+  border-width: 3px;
+  border-style: solid;
+  border-color: black;
 }
 
 .b-icon {
@@ -55,29 +68,41 @@ body {
   align-content: center;
   margin-top: 79px;
   margin-bottom: 79px;
+  border-width: 3px;
+  border-style: solid;
 }
 
 .b-newDiv {
   font-family: Arial;
-  background-color: white;
+  background-color: #ffc970;
+  margin: 0px;
+  padding: 10px;
+  box-shadow: black;
 }
 
 .b-newDiv__img {
-  width: auto;
-  height: 120px;
+  width: 255px;
+  height: 150px;
+  border-color: rgb(0, 0, 0);
+  border-width: 3px;
+  border-style: solid;
 }
 .b-newDiv__name {
   font-size: 24px;
   font-weight: bold;
+  text-align: center;
 }
 
 .b-newDiv_class {
   font-size: 16px;
+  color: rgb(107, 107, 107);
+  text-align: center;
 }
 
 .b-newDiv_description {
   font-size: 14px;
-  color: grey;
+  color: rgb(0, 0, 0);
+  text-align: left;
 }
 
 .b-bottom {
