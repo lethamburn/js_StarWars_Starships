@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'starwars';
+  src:  url('fonts/starwars.eot?jgz5at');
+  src:  url('fonts/starwars.eot?jgz5at#iefix') format('embedded-opentype'),
+    url('fonts/starwars.ttf?jgz5at') format('truetype'),
+    url('fonts/starwars.woff?jgz5at') format('woff'),
+    url('fonts/starwars.svg?jgz5at#starwars') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'starwars' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Galactic-Empire:before {
+  content: "\e906";
+}
+.icon-New-republic:before {
+  content: "\e907";
+}
+.icon-star-wars:before {
+  content: "\e905";
+  color: #000;
+}
+.icon-starwars:before {
+  content: "\e904";
+  color: #000;
+}
+.icon-deathstar:before {
+  content: "\e900";
+}
+.icon-falcon:before {
+  content: "\e901";
+}
+.icon-r2d2:before {
+  content: "\e902";
+}
+.icon-tie:before {
+  content: "\e903";
+}
