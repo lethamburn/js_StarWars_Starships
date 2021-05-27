@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'starwars';
-  src:  url('fonts/starwars.eot?jgz5at');
-  src:  url('fonts/starwars.eot?jgz5at#iefix') format('embedded-opentype'),
-    url('fonts/starwars.ttf?jgz5at') format('truetype'),
-    url('fonts/starwars.woff?jgz5at') format('woff'),
-    url('fonts/starwars.svg?jgz5at#starwars') format('svg');
+  src:  url('fonts/starwars.eot?9wfdc2');
+  src:  url('fonts/starwars.eot?9wfdc2#iefix') format('embedded-opentype'),
+    url('fonts/starwars.ttf?9wfdc2') format('truetype'),
+    url('fonts/starwars.woff?9wfdc2') format('woff'),
+    url('fonts/starwars.svg?9wfdc2#starwars') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-gallery-layout-svgrepo-com:before {
+  content: "\e908";
+}
 .icon-Galactic-Empire:before {
   content: "\e906";
 }
@@ -33,7 +36,6 @@
 }
 .icon-star-wars:before {
   content: "\e905";
-  color: #000;
 }
 .icon-starwars:before {
   content: "\e904";
@@ -50,4 +52,7 @@
 }
 .icon-tie:before {
   content: "\e903";
+}
+.icon-menu:before {
+  content: "\e9bd";
 }
