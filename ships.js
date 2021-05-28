@@ -58,11 +58,30 @@ function printships(ships) {
 
   //------------------------BOTON DE EDITAR--------------------------------
   const editBtn = document.querySelector('[data-function="editBtn"]');
-  editBtn.addEventListener("click", () => {
-    
-  });
+  editBtn.addEventListener("click", () => {});
 
+  //----------------------ESTRELLAS--------------------------
+  const pintarEstrellas = () => {
+    let estrellas = "";
 
+    for (let i = 0; i > 5; i++) {
+      if (estrellaCompleta) {
+        estrellas += '<img src="estrella_rellena"></img>';
+      } else {
+        estrellas += '<img src="estrella_vacia"></img>';
+      }
+    }
+
+    asdasd.innerHtml = `
+  
+  <div>.....
+  
+  ${estrellas}
+  
+  ...html
+  
+  `;
+  };
 
   //-------------------LLAMAR AL FETCH PARA BORRAR ELEMENTOS CON EL BOTON-----------------------
   const removeShip = (id) => {

@@ -1,7 +1,7 @@
 body {
   background-color: rgb(107, 107, 107);
   margin: 0px;
-  background: url("background1.jpg") no-repeat;
+  background: url("images/background1.jpg") no-repeat;
   background-size: cover;
   background-position: top;
 }
@@ -151,7 +151,7 @@ a:active {
   color: #deb738;
   font-weight: bold;
   text-shadow: 4px 3px 0 #030303;
-  background-image: url(1145374.jpg);
+  background-image: url(images/1145374.jpg);
   background-size: contain;
 }
 .b-ship__crawl--padding {
