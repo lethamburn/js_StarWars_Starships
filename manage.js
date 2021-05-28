@@ -1,6 +1,6 @@
 const form$$ = document.querySelector("form");
 
-form$$.addEventListener("submit", (sub) => {
+form$$ && form$$.addEventListener("submit", (sub) => {
   sub.preventDefault();
 
   const name = form$$.querySelector(".starshipname").value;

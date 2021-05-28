@@ -35,8 +35,8 @@
    <!-------------------------------CONTENEDOR PRINCIPAL Y TEXTO----------------------------------------------------->        
     <div class="b-ships container">
         <div class="row">
-            <div class="b-ships--top col-md-12">
-            <form class="b-form" action=""><h2>Fleet Management</h2>
+            <div class="b-ships--top col-md-6">
+              <form class="b-form" action=""><h2>Fleet Management</h2>
                 <legend id="starshipname">Starship Name</legend>
                 <input class="starshipname b-form--fill" type="text" id="starshipname">
                 <legend id="class1">Class</legend>
@@ -47,18 +47,22 @@
                 <input class="description b-form--fill" type="text" id="description">
                 <legend id="image">Image URL</legend>
                 <input class="image b-form--fill" type="html" id="image">
-                <legend id="commentary">Commentary</legend>
-                <input class="commentary b-form--fill" type="text" id="commentary">
                 <button class="b-form--fill">Save</button>
-            </form>
+              </form>
+            </div>
+            <div class="b-ships--top col-md-6">
+              <form class="b-form" action=""><h2 style="text-align: left; margin-right: 40px">Preview</h2>
+                <div data-function="preview"></div>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 <!-----------------------------------------------------FOOTER-------------------------------------------------------->
   <footer>
     <div class="b-bottom" class="container">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-6">
           <p>Siguenos en:</p>
           <div>
             <a class="b-bottom__links" href="http://twitter.com">Twitter</a><span> |</span>
@@ -67,7 +71,9 @@
             <a class="b-bottom__links" href="http://tiktok.com">TikTok</a><span> |</span>
           </div>
           <p class="b-bottom__copy">Copyright Star Wars © 2021</p>
-        </div></div></div>
+        </div>
+      </div>
+    </div>
   </footer>
   </body>
 </html>
