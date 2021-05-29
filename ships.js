@@ -37,7 +37,7 @@ function printships(ships) {
     <p class="b-newDiv b-newDiv_description">${rebel.description}</p>
     <p class="b-newDiv b-newDiv_stars">Fire Power: ${rebel.stars}</p>`;
     //<div class="b-edit"><button data-function="editBtn" class="b-editbtn">Edit</button></div>
-    //---------------CREAR Y DEFINIR EL DELETE------------------
+    //---------------CREAR Y DEFINIR EL DELETE Y EDIT------------------
     const deletebtn$$ = document.createElement("button");
     deletebtn$$.className = "b-editbtn";
     deletebtn$$.textContent = "Delete";
@@ -71,7 +71,7 @@ function printships(ships) {
   shipsnum.appendChild(shipsCounter);
 
   //----------------------ESTRELLAS--------------------------
-  const pintarEstrellas = () => {
+  /*  const pintarEstrellas = () => {
     let estrellas = "";
 
     for (let i = 0; i > 5; i++) {
@@ -91,7 +91,7 @@ function printships(ships) {
   ...html
   
   `;
-  };
+  }; */
 
   //-------------------LLAMAR AL FETCH PARA BORRAR ELEMENTOS CON EL BOTON-----------------------
   const removeShip = (id) => {
