@@ -36,7 +36,6 @@ function printships(ships) {
     <h2 class="b-newDiv b-newDiv_class">${rebel.class1}</h2>
     <p class="b-newDiv b-newDiv_description">${rebel.description}</p>
     <p class="b-newDiv b-newDiv_stars">Fire Power: ${rebel.stars}</p>`;
-    //<div class="b-edit"><button data-function="editBtn" class="b-editbtn">Edit</button></div>
     //---------------CREAR Y DEFINIR EL DELETE Y EDIT------------------
     const deletebtn$$ = document.createElement("button");
     deletebtn$$.className = "b-editbtn";

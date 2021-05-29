@@ -1,4 +1,5 @@
 body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background-color: rgb(107, 107, 107);
   margin: 0px;
   background: url("images/background1.jpg") no-repeat;
@@ -147,6 +148,7 @@ a:active {
 }
 
 .b-ships__crawl {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-align: justify;
   color: #deb738;
   font-weight: bold;
@@ -161,7 +163,7 @@ a:active {
   padding-bottom: 10px;
 }
 .b-newDiv {
-  font-family: Arial;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background-color: #d9a15f;
   margin: 0px;
   padding: 10px;
@@ -176,6 +178,7 @@ a:active {
   box-shadow: black 0px 2px 0px 0px;
 }
 .b-newDiv__name {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 24px;
   font-weight: bold;
   text-align: center;
