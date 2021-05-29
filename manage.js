@@ -1,48 +1,49 @@
 const form$$ = document.querySelector("form");
+let name$$ = form$$.querySelector(".starshipname");
+let class1$$ = form$$.querySelector(".class1");
+let stars$$ = form$$.querySelector(".stars");
+let description$$ = form$$.querySelector(".description");
+let image$$ = form$$.querySelector(".image");
 
 form$$.addEventListener("submit", (sub) => {
   sub.preventDefault();
 
-  const name = form$$.querySelector(".starshipname").value;
-  const class1 = form$$.querySelector(".class1").value;
-  const stars = form$$.querySelector(".stars").value;
-  const description = form$$.querySelector(".description").value;
-  const image = form$$.querySelector(".image").value;
-
   const newProduct = {
-    name: name,
-    class1: class1,
-    stars: stars,
-    description: description,
-    image: image,
+    name: name$$.value,
+    class1: class1$$.value,
+    stars: stars$$.value,
+    description: description$$.value,
+    image: image$$.value,
   };
 
-  addProduct(newProduct);
+  if(numId){
+    updateProduct(newProduct);
+  }
+  else{
+    addProduct(newProduct)
+  }
+  resetInputs();
 });
 
-form$$.addEventListener("change", (sub) => {
-  sub.preventDefault();
-
-  const name = form$$.querySelector(".starshipname").value;
-  const class1 = form$$.querySelector(".class1").value;
-  const stars = form$$.querySelector(".stars").value;
-  const description = form$$.querySelector(".description").value;
-  const image = form$$.querySelector(".image").value;
-
-  const newProduct = {
-    name: name,
-    class1: class1,
-    stars: stars,
-    description: description,
-    image: image,
-  };
-
-  previewProduct(newProduct);
-});
+function resetInputs() {
+  name$$.value = "";
+  class1$$.value = "";
+  stars$$.value = "";
+  description$$.value = "";
+  image$$.value = "";
+}
 
 function addProduct(newProduct) {
   fetch("http://localhost:3000/ships/", {
     method: "POST",
+    headers: { "Content-type": "application/json; charset=UTF-8" },
+    body: JSON.stringify(newProduct),
+  });
+}
+
+function updateProduct(newProduct) {
+  fetch("http://localhost:3000/ships/" + numId, {
+    method: "PUT",
     headers: { "Content-type": "application/json; charset=UTF-8" },
     body: JSON.stringify(newProduct),
   });
@@ -52,3 +53,37 @@ function addProduct(newProduct) {
       console.log(resData);
     });
 }*/
+
+let numId;
+let selectedShip;
+
+function catchID() {
+  const urlParams = new URLSearchParams(window.location.search);
+  numId = urlParams.get("id");
+}
+
+function searchShip(ships) {
+  selectedShip = ships.find((ship) => ship.id === Number(numId));
+
+  console.log(selectedShip);
+}
+
+function loadShip() {
+  name$$.value = selectedShip.name;
+  class1$$.value = selectedShip.class1;
+  stars$$.value = selectedShip.stars;
+  description$$.value = selectedShip.description;
+  image$$.value = selectedShip.image;
+}
+
+if (window.location.href.includes("?id=")) {
+  catchID();
+  fetch("http://localhost:3000/ships/")
+    .then((res) => res.json())
+    .then((ships) => {
+      //console.log(ships);
+      //printships(ships);
+      searchShip(ships);
+      loadShip();
+    });
+}

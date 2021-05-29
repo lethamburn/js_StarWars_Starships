@@ -1,0 +1,68 @@
+{
+  "ships": [
+    {
+      "id": 1,
+      "name": "TIE-Fighter",
+      "class1": "TIE/LN Starfighter",
+      "description": "Carried aboard Star Destroyers and battle stations, TIE fighters were single-pilot vehicles designed for fast-paced dogfights with Rebel X-wings and other starfighters.",
+      "stars": 4.5,
+      "image": "https://lumiere-a.akamaihd.net/v1/images/TIE-Fighter_25397c64.jpeg"
+    },
+    {
+      "id": 2,
+      "name": "X-Wing",
+      "class1": "T-65 Starfighter",
+      "description": "The X-wing is a versatile Rebel Alliance starfighter that balances speed with firepower.",
+      "stars": 4.5,
+      "image": "https://lumiere-a.akamaihd.net/v1/images/X-Wing-Fighter_47c7c342.jpeg"
+    },
+    {
+      "id": 3,
+      "name": "Delta Shuttle",
+      "class1": "T-3c Shuttle",
+      "description": "The Delta-class T-3c shuttle was originally designed as a side project by Sienar Fleet Systems and was not intended for production. ",
+      "stars": 1,
+      "image": "https://pbs.twimg.com/media/EKye5V6XkAIvMQx.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Millennium Falcon",
+      "class1": "YT-1300 Cargo",
+      "description": "The Millennium Falcon is a legend in smuggler circles and is coveted by many for being the fastest hunk of junk in the galaxy.",
+      "stars": 3.5,
+      "image": "https://lumiere-a.akamaihd.net/v1/images/millennium-falcon-main-tlj-a_7cf89d3a.jpeg"
+    },
+    {
+      "id": 5,
+      "name": "Acclamator",
+      "class1": "Troopship",
+      "description": "The Acclamator-class assault transport was 752 meters long, 460 meters in width, and 200 meters in height.",
+      "stars": 3.5,
+      "image": "https://static.wikia.nocookie.net/starwars/images/8/86/Arrestor.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Tantive IV",
+      "class1": "CR90",
+      "description": "Both Bail Organa and his adopted daughter Leia used this Alderaanian starship on public missions for the Senate and secret ones for the Alliance.",
+      "stars": 3,
+      "image": "https://lumiere-a.akamaihd.net/v1/images/tantive-iv-main_f1ea3fa5.jpeg"
+    },
+    {
+      "id": 7,
+      "name": "Rendili StarDrive",
+      "class1": "Light Corvette",
+      "description": "Rendili StarDrive's light corvette was the backbone of this force.",
+      "stars": 5,
+      "image": "http://fractalsponge.net/wp/wp-content/uploads/2019/01/light_crv32.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Snowspeeder",
+      "class1": "T-47",
+      "description": "The Rebel Alliance modified T-47 airspeeders to become snowspeeders, fast flying conveyances for patrol and defense of their hidden base.",
+      "stars": 5,
+      "image": "https://lumiere-a.akamaihd.net/v1/images/snowspeeder_ef2f9334.jpeg"
+    }
+  ]
+}

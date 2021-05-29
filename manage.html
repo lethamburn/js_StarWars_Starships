@@ -38,21 +38,25 @@
             <div class="b-ships--top col-md-6">
               <form class="b-form" action=""><h2>Fleet Management</h2>
                 <legend id="starshipname">Starship Name</legend>
-                <input class="starshipname b-form--fill" type="text" id="starshipname">
+                <input class="starshipname b-form--fill" type="text" id="starshipname" onkeyup="document.getElementById('previewname').innerHTML = this.value">
                 <legend id="class1">Class</legend>
-                <input class="class1 b-form--fill" type="text" id="class1">
+                <input class="class1 b-form--fill" type="text" id="class1" onkeyup="document.getElementById('previewclass').innerHTML = this.value">
                 <legend id="stars">Fire Power</legend>
-                <input class="stars b-form--fill" type="number" id="stars">
+                <input class="stars b-form--fill" type="text" id="stars" onkeyup="document.getElementById('previewstars').innerHTML = this.value">
                 <legend id="description">Description</legend>
-                <input class="description b-form--fill" type="text" id="description">
+                <input class="description b-form--fill" type="text" id="description" onkeyup="document.getElementById('previewdescription').innerHTML = this.value">
                 <legend id="image">Image URL</legend>
-                <input class="image b-form--fill" type="html" id="image">
+                <input class="image b-form--fill" type="html" id="image" onkeyup="document.getElementById('previewimg').innerHTML = `<img width='200' heigth='100%' src=${this.value}>`">
                 <button class="b-form--fill">Save</button>
               </form>
             </div>
             <div class="b-ships--top col-md-6">
               <form class="b-form" action=""><h2 style="text-align: left; margin-right: 40px">Preview</h2>
-                <div data-function="preview"></div>
+                <div id="previewname"></div>
+                <div id="previewclass"></div>
+                <div id="previewstars"></div>
+                <div id="previewdescription"></div>
+                <div id="previewimg"></div>
               </form>
             </div>
           </div>

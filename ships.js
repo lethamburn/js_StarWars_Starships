@@ -17,7 +17,7 @@ const shipsDiv = document.querySelector('[data-function="ships"]');
 
 function printships(ships) {
   for (const rebel of ships) {
-    //--------------CREAR EL DIV INTERNO Y SUS CLASES--------------------
+    //--------------DEFINICION DE VISTAS GALERIA--------------------
     const newDiv$$ = document.createElement("div");
     newDiv$$.classList.add("b-newDiv", "col-md-3");
 
@@ -30,35 +30,45 @@ function printships(ships) {
       newDiv$$.classList.add("b-newDiv", "col-md-12");
     });
 
-    //newDiv$$.classList.add("b-newDiv", "col-md-3"); //CAMBIAR CLASES SEGUN BOTONES Y REMOVE AL ANTERIOR
     //---------------------ELEMENTOS DEL DIV-----------------------------
     newDiv$$.innerHTML = `<img class="b-newDiv__img" src=${rebel.image}>
     <h3 class="b-newDiv b-newDiv__name">${rebel.name}</h3><hr>
     <h2 class="b-newDiv b-newDiv_class">${rebel.class1}</h2>
     <p class="b-newDiv b-newDiv_description">${rebel.description}</p>
-    <p class="b-newDiv b-newDiv_stars">Fire Power: ${rebel.stars}</p>
-    <div class="b-edit"><button data-function="editBtn" class="b-editbtn">Edit</button></div>`;
+    <p class="b-newDiv b-newDiv_stars">Fire Power: ${rebel.stars}</p>`;
+    //<div class="b-edit"><button data-function="editBtn" class="b-editbtn">Edit</button></div>
     //---------------CREAR Y DEFINIR EL DELETE------------------
-    const deletebtn = document.createElement("button");
-    deletebtn.className = "b-editbtn";
-    deletebtn.textContent = "Delete";
-    deletebtn.addEventListener("click", () => {
+    const deletebtn$$ = document.createElement("button");
+    deletebtn$$.className = "b-editbtn";
+    deletebtn$$.textContent = "Delete";
+    deletebtn$$.addEventListener("click", () => {
       removeShip(rebel.id);
+      window.location = `ships.html`;
     });
-    newDiv$$.appendChild(deletebtn);
+    newDiv$$.appendChild(deletebtn$$);
+
+    const editbtn$$ = document.createElement("button");
+    editbtn$$.setAttribute("data-function", "editBtn");
+    editbtn$$.className = "b-editbtn";
+    editbtn$$.textContent = "Edit";
+    editbtn$$.addEventListener("click", (event) => {
+      rebelID = rebel.id;
+      window.location = `manage.html?id=${rebelID}`;
+    });
+    newDiv$$.appendChild(editbtn$$);
+
     //---------------ENLAZAR DIV INTERNO AL DIV CENTRAL------------------
     shipsDiv.appendChild(newDiv$$);
+
+    //------------------------BOTON DE EDITAR--------------------------------
   }
+
   //----------------CONTADOR DE ELEMENTOS PARA EL TITULO---------------------------
 
   const shipsCounter = document.createElement("div");
   const shipsCount = ships.length;
   shipsCounter.innerHTML = `Starships (${shipsCount})`;
   shipsnum.appendChild(shipsCounter);
-
-  //------------------------BOTON DE EDITAR--------------------------------
-  const editBtn = document.querySelector('[data-function="editBtn"]');
-  editBtn.addEventListener("click", () => {});
 
   //----------------------ESTRELLAS--------------------------
   const pintarEstrellas = () => {
