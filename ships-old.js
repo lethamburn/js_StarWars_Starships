@@ -12,15 +12,28 @@ fetch(shipsUrl)
   .then((ships) => {
     console.log(ships);
     printships(ships);
-    printships(filteredData);
     dataSearch = ships;
   });
 
+
+
+  //--------------------------BUSCADOR-------------------------------
+  searchBar$$.addEventListener("input", (event) => {
+    let filteredData = dataSearch.filter((ships) =>
+      ships.name.toLowerCase().includes(event.target.value.toLowerCase())
+    );
+
+    printships(filteredData);
+  });
+  
 //-------------------SELECCIONAR DIV CENTRAL-------------------------
 const shipsDiv = document.querySelector('[data-function="ships"]');
 
+
+
 function printships(ships) {
   for (const rebel of ships) {
+    
     //--------------DEFINICION DE VISTAS GALERIA--------------------
     const newDiv$$ = document.createElement("div");
     newDiv$$.classList.add("b-newDiv", "col-md-3");
@@ -33,6 +46,8 @@ function printships(ships) {
       newDiv$$.classList.remove("b-newDiv", "col-md-3");
       newDiv$$.classList.add("b-newDiv", "col-md-12"); //CLASSLIST.TOOGLE
     });
+
+  
 
     //---------------------ELEMENTOS DEL DIV-----------------------------
     newDiv$$.innerHTML = `<img class="b-newDiv__img" src=${rebel.image}>
@@ -62,53 +77,46 @@ function printships(ships) {
 
     //---------------ENLAZAR DIV INTERNO AL DIV CENTRAL------------------
     shipsDiv.appendChild(newDiv$$);
-
-  
   }
-   
-
-//----------------------ESTRELLAS--------------------------
-/*  const pintarEstrellas = () => {
-  let estrellas = "";
-
-  for (let i = 0; i > 5; i++) {
-    if (estrellaCompleta) {
-      estrellas += '<img src="estrella_rellena"></img>';
-    } else {
-      estrellas += '<img src="estrella_vacia"></img>';
-    }
-  }
-
-  asdasd.innerHtml = `
-
-<div>.....
-
-${estrellas}
-
-...html
-
-`;
-}; */
- //----------------CONTADOR DE ELEMENTOS PARA EL TITULO---------------------------
-
- const shipsCounter = document.createElement("div");
- const shipsCount = ships.length;
- shipsCounter.innerHTML = `Starships (${shipsCount})`;
- shipsnum.appendChild(shipsCounter);
-}
-//-------------------LLAMAR AL FETCH PARA BORRAR ELEMENTOS CON EL BOTON DE LA DB-----------------------
-const removeShip = (id) => {
-  fetch("http://localhost:3000/ships/" + id, {
-    method: "DELETE",
-    headers: { "Content-type": "application/json; charset=UTF-8" },
-  });
-};
-
-//--------------------------BUSCADOR-------------------------------
-searchBar$$.addEventListener("input", (event) => {
-  let filteredData = dataSearch.filter((ships) =>
-    ships.name.toLowerCase().includes(event.target.value.toLowerCase())
-  );
 
  
-});
+  //----------------CONTADOR DE ELEMENTOS PARA EL TITULO---------------------------
+
+  const shipsCounter = document.createElement("div");
+  const shipsCount = ships.length;
+  shipsCounter.innerHTML = `Starships (${shipsCount})`;
+  shipsnum.appendChild(shipsCounter);
+
+  //----------------------ESTRELLAS--------------------------
+  /*  const pintarEstrellas = () => {
+    let estrellas = "";
+
+    for (let i = 0; i > 5; i++) {
+      if (estrellaCompleta) {
+        estrellas += '<img src="estrella_rellena"></img>';
+      } else {
+        estrellas += '<img src="estrella_vacia"></img>';
+      }
+    }
+
+    asdasd.innerHtml = `
+  
+  <div>.....
+  
+  ${estrellas}
+  
+  ...html
+  
+  `;
+  }; */
+
+  //-------------------LLAMAR AL FETCH PARA BORRAR ELEMENTOS CON EL BOTON DE LA DB-----------------------
+  const removeShip = (id) => {
+    fetch("http://localhost:3000/ships/" + id, {
+      method: "DELETE",
+      headers: { "Content-type": "application/json; charset=UTF-8" },
+    });
+  };
+
+  
+}
