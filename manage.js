@@ -1,10 +1,12 @@
+//-----------DECLARACION DE CONST Y NODOS--------------
+
 const form$$ = document.querySelector("form");
 let name$$ = form$$.querySelector(".starshipname");
 let class1$$ = form$$.querySelector(".class1");
 let stars$$ = form$$.querySelector(".stars");
 let description$$ = form$$.querySelector(".description");
 let image$$ = form$$.querySelector(".image");
-
+//------------AÑADIR EVENTO DE SUBIR EL FORMULARIO DE MANAGE------------
 form$$.addEventListener("submit", (sub) => {
   sub.preventDefault();
 
@@ -15,12 +17,11 @@ form$$.addEventListener("submit", (sub) => {
     description: description$$.value,
     image: image$$.value,
   };
-
-  if(numId){
+  //----------COMPARAR SI ESTA SUBIDO O SE ESTA EDITANDO--------------
+  if (numId) {
     updateProduct(newProduct);
-  }
-  else{
-    addProduct(newProduct)
+  } else {
+    addProduct(newProduct);
   }
   resetInputs();
 });
@@ -48,11 +49,6 @@ function updateProduct(newProduct) {
     body: JSON.stringify(newProduct),
   });
 }
-/*    .then((res) => res.json())
-    .then((resData) => {
-      console.log(resData);
-    });
-}*/
 
 let numId;
 let selectedShip;

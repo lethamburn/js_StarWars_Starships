@@ -58,10 +58,7 @@ function printships(ships) {
 
     //---------------ENLAZAR DIV INTERNO AL DIV CENTRAL------------------
     shipsDiv.appendChild(newDiv$$);
-
-    //------------------------BOTON DE EDITAR--------------------------------
   }
-
   //----------------CONTADOR DE ELEMENTOS PARA EL TITULO---------------------------
 
   const shipsCounter = document.createElement("div");
@@ -92,7 +89,7 @@ function printships(ships) {
   `;
   }; */
 
-  //-------------------LLAMAR AL FETCH PARA BORRAR ELEMENTOS CON EL BOTON-----------------------
+  //-------------------LLAMAR AL FETCH PARA BORRAR ELEMENTOS CON EL BOTON DE LA DB-----------------------
   const removeShip = (id) => {
     fetch("http://localhost:3000/ships/" + id, {
       method: "DELETE",

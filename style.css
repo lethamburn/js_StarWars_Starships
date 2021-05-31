@@ -1,37 +1,12 @@
 body {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   background-color: rgb(107, 107, 107);
   margin: 0px;
   background: url("images/background1.jpg") no-repeat;
   background-size: cover;
   background-position: top;
 }
-hr {
-  background-color: black;
-}
-/* unvisited link */
-a:link {
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-}
 
-/* visited link */
-a:visited {
-  color: rgb(0, 0, 0);
-}
-
-/* mouse over link */
-a:hover {
-  color: rgb(128, 128, 128);
-}
-
-/* selected link */
-a:active {
-  color: rgb(0, 0, 0);
-}
-.icon-star-wars {
-  color: white;
-}
 .flex {
   display: flex;
   flex-wrap: wrap;
@@ -58,13 +33,13 @@ a:active {
   border-radius: 5px;
 }
 
-.b-form{
+.b-form {
   padding-top: 10px;
   padding-bottom: 40px;
   padding-left: 20px;
 }
 
-.b-form--fill{
+.b-form--fill {
   height: 28px;
   text-decoration: none;
   border-radius: 5px;
@@ -148,7 +123,7 @@ a:active {
 }
 
 .b-ships__crawl {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   text-align: justify;
   color: #deb738;
   font-weight: bold;
@@ -163,7 +138,7 @@ a:active {
   padding-bottom: 10px;
 }
 .b-newDiv {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   background-color: #d9a15f;
   margin: 0px;
   padding: 10px;
@@ -178,7 +153,7 @@ a:active {
   box-shadow: black 0px 2px 0px 0px;
 }
 .b-newDiv__name {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 24px;
   font-weight: bold;
   text-align: center;
@@ -240,4 +215,27 @@ a:active {
 }
 .b-bottom__copy {
   padding-top: 35px;
+}
+hr {
+  background-color: black;
+}
+
+a:link {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+a:visited {
+  color: rgb(0, 0, 0);
+}
+
+a:hover {
+  color: rgb(128, 128, 128);
+}
+
+a:active {
+  color: rgb(0, 0, 0);
+}
+.icon-star-wars {
+  color: white;
 }
