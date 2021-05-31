@@ -27,7 +27,7 @@ function printships(ships) {
     });
     disList.addEventListener("click", () => {
       newDiv$$.classList.remove("b-newDiv", "col-md-3");
-      newDiv$$.classList.add("b-newDiv", "col-md-12");
+      newDiv$$.classList.add("b-newDiv", "col-md-12"); //CLASSLIST.TOOGLE
     });
 
     //---------------------ELEMENTOS DEL DIV-----------------------------

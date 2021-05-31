@@ -63,6 +63,14 @@
       "description": "The Rebel Alliance modified T-47 airspeeders to become snowspeeders, fast flying conveyances for patrol and defense of their hidden base.",
       "stars": 5,
       "image": "https://lumiere-a.akamaihd.net/v1/images/snowspeeder_ef2f9334.jpeg"
+    },
+    {
+      "name": "A",
+      "class1": "B",
+      "stars": "1",
+      "description": "The Spaceball's main character's ship",
+      "image": "https://lumiere-a.akamaihd.net/v1/images/X-Wing-Fighter_47c7c342.jpeg",
+      "id": 9
     }
   ]
 }
