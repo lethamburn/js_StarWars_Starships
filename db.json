@@ -65,11 +65,11 @@
       "image": "https://lumiere-a.akamaihd.net/v1/images/snowspeeder_ef2f9334.jpeg"
     },
     {
-      "name": "A",
-      "class1": "B",
-      "stars": "1",
-      "description": "The Spaceball's main character's ship",
-      "image": "https://lumiere-a.akamaihd.net/v1/images/X-Wing-Fighter_47c7c342.jpeg",
+      "name": "Eagle 5",
+      "class1": "Van",
+      "stars": "4.5",
+      "description": "Eagle 5 is the 1986 Winnebago Chieftain 33 that Lone Starr and Barf travel in, using it as a flying spacecraft (with space engines and wings attached). ",
+      "image": "https://static.wikia.nocookie.net/spaceballs/images/a/a6/Spaceballs-eagle5.jpg",
       "id": 9
     }
   ]
